@@ -2,16 +2,15 @@ object DKTextDialogForm: TDKTextDialogForm
   Left = 377
   Height = 167
   Top = 250
-  Width = 600
+  Width = 500
   AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'DKTextDialogForm'
   ClientHeight = 167
-  ClientWidth = 600
+  ClientWidth = 500
   Constraints.MinHeight = 125
-  Constraints.MinWidth = 600
+  Constraints.MinWidth = 500
   DesignTimePPI = 120
-  LCLVersion = '4.0.0.4'
   OnCreate = FormCreate
   OnShow = FormShow
   object ButtonPanel: TPanel
@@ -19,7 +18,7 @@ object DKTextDialogForm: TDKTextDialogForm
     Left = 6
     Height = 40
     Top = 121
-    Width = 588
+    Width = 488
     Align = alBottom
     Anchors = [akLeft, akRight]
     AutoSize = True
@@ -28,7 +27,7 @@ object DKTextDialogForm: TDKTextDialogForm
     BorderSpacing.Bottom = 6
     BevelOuter = bvNone
     ClientHeight = 40
-    ClientWidth = 588
+    ClientWidth = 488
     ParentBackground = False
     TabOrder = 0
     object CancelButton: TSpeedButton
@@ -36,7 +35,7 @@ object DKTextDialogForm: TDKTextDialogForm
       AnchorSideRight.Control = ButtonPanel
       AnchorSideRight.Side = asrBottom
       Cursor = crHandPoint
-      Left = 482
+      Left = 382
       Height = 40
       Top = 0
       Width = 106
@@ -57,7 +56,7 @@ object DKTextDialogForm: TDKTextDialogForm
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = NoButton
       Cursor = crHandPoint
-      Left = 333
+      Left = 233
       Height = 40
       Top = 0
       Width = 71
@@ -78,7 +77,7 @@ object DKTextDialogForm: TDKTextDialogForm
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = CancelButton
       Cursor = crHandPoint
-      Left = 404
+      Left = 304
       Height = 40
       Top = 0
       Width = 78
@@ -99,7 +98,7 @@ object DKTextDialogForm: TDKTextDialogForm
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = YesButton
       Cursor = crHandPoint
-      Left = 260
+      Left = 160
       Height = 40
       Top = 0
       Width = 73
@@ -120,12 +119,12 @@ object DKTextDialogForm: TDKTextDialogForm
     Left = 0
     Height = 113
     Top = 0
-    Width = 72
+    Width = 137
     Align = alLeft
     AutoSize = True
     BevelOuter = bvNone
     ClientHeight = 113
-    ClientWidth = 72
+    ClientWidth = 137
     Color = clWhite
     ParentBackground = False
     ParentColor = False
@@ -134,25 +133,26 @@ object DKTextDialogForm: TDKTextDialogForm
       Left = 12
       Height = 48
       Top = 12
-      Width = 48
+      Width = 113
       Align = alTop
       AutoSize = True
       BorderSpacing.Left = 12
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 20
       Center = True
     end
   end
   object MainPanel: TPanel
-    Left = 72
+    Left = 137
     Height = 113
     Top = 0
-    Width = 528
+    Width = 363
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
     ClientHeight = 113
-    ClientWidth = 528
+    ClientWidth = 363
     Color = clWhite
     ParentBackground = False
     ParentColor = False
@@ -161,7 +161,7 @@ object DKTextDialogForm: TDKTextDialogForm
       Left = 0
       Height = 20
       Top = 12
-      Width = 516
+      Width = 351
       Align = alTop
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
@@ -174,7 +174,7 @@ object DKTextDialogForm: TDKTextDialogForm
     Left = 0
     Height = 8
     Top = 113
-    Width = 600
+    Width = 500
     Align = alBottom
     Shape = bsTopLine
   end

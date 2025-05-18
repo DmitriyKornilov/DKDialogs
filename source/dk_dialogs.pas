@@ -13,14 +13,16 @@ uses
    Кнопки   : "Ок"
    Параметры:
    AInfo - текст сообщения
-   ACaption - заголовок окна сообщения}
+   ACaption - заголовок окна сообщения
+   Если ACaption='APP_TITLE' - наименование приложения}
   procedure Inform(const AInfo: String; const ACaption: String = '');
 
   {ОКНО С ЗАПРОСОМ
    Кнопки   : "Да" [Result=True], "Нет" (по умолчанию)[Result=False]
    Параметры:
    AQuestion - текст запроса
-   ACaption - заголовок окна запроса}
+   ACaption - заголовок окна запроса
+   Если ACaption='APP_TITLE' - наименование приложения}
   function Confirm(const AQuestion: String; const ACaption: String = ''): Boolean;
 
 implementation
@@ -28,7 +30,7 @@ implementation
 function TextFormOpen(const AImageIndex: Integer;
                       const AOKVisible, AYesVisible,
                             ANoVisible, ACancelVisible: Boolean;
-                      const AText: String; const ACaption: String = ''): TModalResult;
+                      const AText: String; const ACaption: String): TModalResult;
 var
   Frm: TDKTextDialogForm;
 begin
@@ -50,7 +52,7 @@ begin
   end;
 end;
 
-procedure Inform(const AInfo: String; const ACaption: String = '');
+procedure Inform(const AInfo: String; const ACaption: String);
 begin
   TextFormOpen(0,
                True{OK},
