@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="DKDialogs"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="source;source\png"/>
+        <OtherUnitFiles Value="source"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="source\dk_dialogimages.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="source\dk_dialogimages.pas"/>
+        <UnitName Value="DK_DialogImages"/>
+      </Item>
+      <Item>
+        <Filename Value="source\dk_dialogs.pas"/>
+        <UnitName Value="DK_Dialogs"/>
+      </Item>
+      <Item>
+        <Filename Value="source\dk_textdialogform.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="source\dk_textdialogform.pas"/>
+        <UnitName Value="DK_TextDialogForm"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\check.png"/>
+        <Type Value="Binary"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\icons_info.txt"/>
+        <Type Value="Text"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\info-mark.png"/>
+        <Type Value="Binary"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\no.png"/>
+        <Type Value="Binary"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\question-mark.png"/>
+        <Type Value="Binary"/>
+      </Item>
+      <Item>
+        <Filename Value="source\png\undo.png"/>
+        <Type Value="Binary"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="DKUtils"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

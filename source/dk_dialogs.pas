@@ -1,0 +1,74 @@
+unit DK_Dialogs;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, System.UITypes,
+
+  DK_TextDialogForm;
+
+  {ОКНО С СООБЩЕНИЕМ
+   Кнопки   : "Ок"
+   Параметры:
+   AInfo - текст сообщения
+   ACaption - заголовок окна сообщения}
+  procedure Inform(const AInfo: String; const ACaption: String = '');
+
+  {ОКНО С ЗАПРОСОМ
+   Кнопки   : "Да" [Result=True], "Нет" (по умолчанию)[Result=False]
+   Параметры:
+   AQuestion - текст запроса
+   ACaption - заголовок окна запроса}
+  function Confirm(const AQuestion: String; const ACaption: String = ''): Boolean;
+
+implementation
+
+function TextFormOpen(const AImageIndex: Integer;
+                      const AOKVisible, AYesVisible,
+                            ANoVisible, ACancelVisible: Boolean;
+                      const AText: String; const ACaption: String = ''): TModalResult;
+var
+  Frm: TDKTextDialogForm;
+begin
+  Frm:= TDKTextDialogForm.Create(nil);
+  try
+    Frm.Caption:= ACaption;
+    Frm.TextLabel.Caption:= AText;
+
+    Frm.Image.ImageIndex:= AImageIndex;
+
+    Frm.OkButton.Visible:= AOKVisible;
+    Frm.YesButton.Visible:= AYesVisible;
+    Frm.NoButton.Visible:= ANoVisible;
+    Frm.CancelButton.Visible:= ACancelVisible;
+
+    Result:= Frm.ShowModal;
+  finally
+    FreeAndNil(Frm);
+  end;
+end;
+
+procedure Inform(const AInfo: String; const ACaption: String = '');
+begin
+  TextFormOpen(0,
+               True{OK},
+               False{Yes},
+               False{No},
+               False{Cancel},
+               AInfo, ACaption);
+end;
+
+function Confirm(const AQuestion: String; const ACaption: String = ''): Boolean;
+begin
+  Result:= TextFormOpen(1,
+                        False{OK},
+                        True{Yes},
+                        True{No},
+                        False{Cancel},
+                        AQuestion, ACaption)=mrYes;
+end;
+
+end.
+

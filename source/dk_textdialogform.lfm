@@ -1,0 +1,181 @@
+object DKTextDialogForm: TDKTextDialogForm
+  Left = 377
+  Height = 167
+  Top = 250
+  Width = 600
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  Caption = 'DKTextDialogForm'
+  ClientHeight = 167
+  ClientWidth = 600
+  Constraints.MinHeight = 125
+  Constraints.MinWidth = 600
+  DesignTimePPI = 120
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object ButtonPanel: TPanel
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 40
+    Top = 121
+    Width = 588
+    Align = alBottom
+    Anchors = [akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 588
+    ParentBackground = False
+    TabOrder = 0
+    object CancelButton: TSpeedButton
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = ButtonPanel
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 482
+      Height = 40
+      Top = 0
+      Width = 106
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Constraints.MinWidth = 70
+      Caption = 'Отмена  '
+      Images = DKDialogImages.PX24
+      ImageIndex = 2
+      Margin = 5
+      Spacing = 5
+      Visible = False
+      ParentFont = False
+      OnClick = CancelButtonClick
+    end
+    object YesButton: TSpeedButton
+      AnchorSideTop.Control = CancelButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = NoButton
+      Cursor = crHandPoint
+      Left = 333
+      Height = 40
+      Top = 0
+      Width = 71
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Constraints.MinWidth = 70
+      Caption = 'Да  '
+      Images = DKDialogImages.PX24
+      ImageIndex = 0
+      Margin = 5
+      Spacing = 5
+      Visible = False
+      ParentFont = False
+      OnClick = YesButtonClick
+    end
+    object NoButton: TSpeedButton
+      AnchorSideTop.Control = CancelButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = CancelButton
+      Cursor = crHandPoint
+      Left = 404
+      Height = 40
+      Top = 0
+      Width = 78
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Constraints.MinWidth = 70
+      Caption = 'Нет  '
+      Images = DKDialogImages.PX24
+      ImageIndex = 1
+      Margin = 5
+      Spacing = 5
+      Visible = False
+      ParentFont = False
+      OnClick = NoButtonClick
+    end
+    object OkButton: TSpeedButton
+      AnchorSideTop.Control = CancelButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = YesButton
+      Cursor = crHandPoint
+      Left = 260
+      Height = 40
+      Top = 0
+      Width = 73
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Constraints.MinWidth = 70
+      Caption = 'OK  '
+      Images = DKDialogImages.PX24
+      ImageIndex = 0
+      Margin = 5
+      Spacing = 5
+      Visible = False
+      ParentFont = False
+      OnClick = OkButtonClick
+    end
+  end
+  object ImagePanel: TPanel
+    Left = 0
+    Height = 113
+    Top = 0
+    Width = 72
+    Align = alLeft
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 113
+    ClientWidth = 72
+    Color = clWhite
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    object Image: TImage
+      Left = 12
+      Height = 48
+      Top = 12
+      Width = 48
+      Align = alTop
+      AutoSize = True
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 12
+      BorderSpacing.Right = 12
+      Center = True
+    end
+  end
+  object MainPanel: TPanel
+    Left = 72
+    Height = 113
+    Top = 0
+    Width = 528
+    Align = alClient
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 113
+    ClientWidth = 528
+    Color = clWhite
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 2
+    object TextLabel: TLabel
+      Left = 0
+      Height = 20
+      Top = 12
+      Width = 516
+      Align = alTop
+      BorderSpacing.Top = 12
+      BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 20
+      Caption = 'TextLabel'
+      WordWrap = True
+    end
+  end
+  object ButtonPanelBevel: TBevel
+    Left = 0
+    Height = 8
+    Top = 113
+    Width = 600
+    Align = alBottom
+    Shape = bsTopLine
+  end
+end
