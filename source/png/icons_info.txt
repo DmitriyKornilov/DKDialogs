@@ -1,8 +1,0 @@
-icon	      		autor			url
-==================================================================================================
-info-mark.png 		Freepik			https://www.flaticon.com/free-icon/info_471713
-question-mark.png	Freepik			https://www.flaticon.com/free-icon/question_471715
-check.png		Pixel perfect		https://www.flaticon.com/free-icon/check_1828743
-undo.png		Pixel perfect		https://www.flaticon.com/free-icon/undo_724893
-no.png			Those Icons		https://www.flaticon.com/free-icon/no-stopping_803253
-
