@@ -9,13 +9,29 @@ uses
 
   DK_TextDialogForm;
 
-  {ОКНО С СООБЩЕНИЕМ
+  {ОКНО С ИНФОРМАЦИОННЫМ СООБЩЕНИЕМ
    Кнопки   : "Ок"
    Параметры:
    AInfo - текст сообщения
    ACaption - заголовок окна сообщения
    Если ACaption='APP_TITLE' - наименование приложения}
   procedure Inform(const AInfo: String; const ACaption: String = '');
+
+  {ОКНО С ПРЕДУПРЕЖДЕНИЕМ
+   Кнопки   : "Ок"
+   Параметры:
+   AWarn - текст сообщения
+   ACaption - заголовок окна сообщения
+   Если ACaption='APP_TITLE' - наименование приложения}
+  procedure Warning(const AWarn: String; const ACaption: String = '');
+
+  {ОКНО С СООБЩЕНИЕМ ОБ ОШИБКЕ
+   Кнопки   : "Ок"
+   Параметры:
+   AError - текст сообщения
+   ACaption - заголовок окна сообщения
+   Если ACaption='APP_TITLE' - наименование приложения}
+  procedure Error(const AError: String; const ACaption: String = '');
 
   {ОКНО С ЗАПРОСОМ
    Кнопки   : "Да" [Result=True], "Нет" (по умолчанию)[Result=False]
@@ -60,6 +76,26 @@ begin
                False{No},
                False{Cancel},
                AInfo, ACaption);
+end;
+
+procedure Warning(const AWarn: String; const ACaption: String);
+begin
+  TextFormOpen(2,
+               True{OK},
+               False{Yes},
+               False{No},
+               False{Cancel},
+               AWarn, ACaption);
+end;
+
+procedure Error(const AError: String; const ACaption: String);
+begin
+  TextFormOpen(3,
+               True{OK},
+               False{Yes},
+               False{No},
+               False{Cancel},
+               AError, ACaption);
 end;
 
 function Confirm(const AQuestion: String; const ACaption: String = ''): Boolean;
