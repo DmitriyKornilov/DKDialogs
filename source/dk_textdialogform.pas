@@ -49,7 +49,7 @@ procedure TDKTextDialogForm.FormCreate(Sender: TObject);
 begin
   DKDialogImages:= TDKDialogImages.Create(Self);
   DKDialogImages.ToButtons([OkButton, YesButton, NoButton, CancelButton]);
-  Image.Images:= DKDialogImages.Images;
+  DKDialogImages.ToMark(TImageList(Image.Images));
 end;
 
 procedure TDKTextDialogForm.FormShow(Sender: TObject);
