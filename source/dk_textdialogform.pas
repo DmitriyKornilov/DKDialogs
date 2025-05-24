@@ -54,7 +54,6 @@ end;
 
 procedure TDKTextDialogForm.FormShow(Sender: TObject);
 begin
-  FormToScreenCenter(Self);
   if Caption='APP_TITLE' then
     Caption:= Application.Title;
 end;

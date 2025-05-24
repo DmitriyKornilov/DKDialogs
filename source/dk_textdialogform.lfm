@@ -11,7 +11,7 @@ object DKTextDialogForm: TDKTextDialogForm
   Constraints.MinHeight = 125
   Constraints.MinWidth = 500
   DesignTimePPI = 120
-  LCLVersion = '4.0.0.4'
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   object ButtonPanel: TPanel
