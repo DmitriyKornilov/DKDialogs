@@ -57,10 +57,10 @@ begin
   if Caption='APP_TITLE' then
     Caption:= Application.Title;
 
-  ControlHeight(OkButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  ControlHeight(YesButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  ControlHeight(NoButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  ControlHeight(CancelButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
+  SetControlHeightScaleToForm(OkButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
+  SetControlHeightScaleToForm(YesButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
+  SetControlHeightScaleToForm(NoButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
+  SetControlHeightScaleToForm(CancelButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
 end;
 
 procedure TDKTextDialogForm.CancelButtonClick(Sender: TObject);
