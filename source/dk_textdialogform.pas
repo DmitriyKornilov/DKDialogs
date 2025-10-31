@@ -48,8 +48,6 @@ implementation
 procedure TDKTextDialogForm.FormCreate(Sender: TObject);
 begin
   DKDialogImages:= TDKDialogImages.Create(Self);
-  DKDialogImages.ToButtons([OkButton, YesButton, NoButton, CancelButton]);
-  DKDialogImages.ToMark(TImageList(Image.Images));
 end;
 
 procedure TDKTextDialogForm.FormShow(Sender: TObject);
@@ -57,10 +55,9 @@ begin
   if Caption='APP_TITLE' then
     Caption:= Application.Title;
 
-  SetControlHeightScaleToForm(OkButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  SetControlHeightScaleToForm(YesButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  SetControlHeightScaleToForm(NoButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
-  SetControlHeightScaleToForm(CancelButton, TOOL_PANEL_HEIGHT_DEFAULT - 2);
+  SetEventButtons([OkButton, YesButton, NoButton, CancelButton]);
+  DKDialogImages.ToButtons([OkButton, YesButton, NoButton, CancelButton]);
+  DKDialogImages.ToMark(TImageList(Image.Images));
 end;
 
 procedure TDKTextDialogForm.CancelButtonClick(Sender: TObject);
