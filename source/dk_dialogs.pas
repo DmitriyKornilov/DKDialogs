@@ -12,33 +12,33 @@ uses
   {ОКНО С ИНФОРМАЦИОННЫМ СООБЩЕНИЕМ
    Кнопки   : "Ок"
    Параметры:
-   AInfo - текст сообщения
-   ACaption - заголовок окна сообщения
-   Если ACaption='APP_TITLE' - наименование приложения}
+     AInfo - текст сообщения
+     ACaption - заголовок окна сообщения
+     Если ACaption='APP_TITLE' - наименование приложения}
   procedure Inform(const AInfo: String; const ACaption: String = '');
 
   {ОКНО С ПРЕДУПРЕЖДЕНИЕМ
    Кнопки   : "Ок"
    Параметры:
-   AWarn - текст сообщения
-   ACaption - заголовок окна сообщения
-   Если ACaption='APP_TITLE' - наименование приложения}
+     AWarn - текст сообщения
+     ACaption - заголовок окна сообщения
+     Если ACaption='APP_TITLE' - наименование приложения}
   procedure Warning(const AWarn: String; const ACaption: String = '');
 
   {ОКНО С СООБЩЕНИЕМ ОБ ОШИБКЕ
    Кнопки   : "Ок"
    Параметры:
-   AError - текст сообщения
-   ACaption - заголовок окна сообщения
-   Если ACaption='APP_TITLE' - наименование приложения}
+     AError - текст сообщения
+     ACaption - заголовок окна сообщения
+     Если ACaption='APP_TITLE' - наименование приложения}
   procedure Error(const AError: String; const ACaption: String = '');
 
   {ОКНО С ЗАПРОСОМ
-   Кнопки   : "Да" [Result=True], "Нет" (по умолчанию)[Result=False]
+   Кнопки   : "Да" [Result=True], "Нет" [Result=False]
    Параметры:
-   AQuestion - текст запроса
-   ACaption - заголовок окна запроса
-   Если ACaption='APP_TITLE' - наименование приложения}
+     AQuestion - текст запроса
+     ACaption - заголовок окна запроса
+     Если ACaption='APP_TITLE' - наименование приложения}
   function Confirm(const AQuestion: String; const ACaption: String = ''): Boolean;
 
 implementation
